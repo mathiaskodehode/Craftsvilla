@@ -58,13 +58,6 @@ function buildFooter() {
     const footer = document.createElement("footer");
     document.body.appendChild(footer);
 
-    const socialMedia = document.createElement("div");
-    socialMedia.classList.add("socialMedia");
-    footer.appendChild(socialMedia);
-    socialMediaItems.forEach((item) => {
-        socialMedia.appendChild(createSocialMediaItem(item));
-    });
-
     const contactInfoContainer = document.createElement("div");
     contactInfoContainer.classList.add("contactInformationContainer");
     footer.appendChild(contactInfoContainer);
@@ -72,6 +65,13 @@ function buildFooter() {
     const temp = document.createElement("p");
     temp.innerHTML = "PLACEHOLDER TEXT!!!!!!";
     contactInfoContainer.appendChild(temp);
+
+    const socialMedia = document.createElement("div");
+    socialMedia.classList.add("socialMedia");
+    footer.appendChild(socialMedia);
+    socialMediaItems.forEach((item) => {
+        socialMedia.appendChild(createSocialMediaItem(item));
+    });
 }
 
 function createSocialMediaItem(socialMediaItem) {

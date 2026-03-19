@@ -1,9 +1,26 @@
 :root {
+    /* colours */
     --backgroundColour: rgb(60, 60, 84);
     --fontColour: rgb(255, 255, 255);
     --navbarHoverFontColour: rgb(100, 100, 255);
-    --navbarBackgroundColour: rgba(54, 75, 75, .75);
-    --navbarHeight: 20px;
+    --navbarBackgroundColour: rgba(55, 55, 77, 0.75);
+    /* 
+    height/width/fontsize/margin/padding/etc based on screen width (maybe a bit 
+    unintuitive, but it works). from my testing this makes sure devices of all 
+    screen widths will be able to contain the contents of the page without any weird 
+    wrapping or overflowing text and images will appear in the same relative size
+    */
+    --navbarHeight: 5vw;
+    --footerHeight: 10vw;
+    --footerTopMargin: 2vw;
+    --fontSize: 2vw;
+    --fontSizeSmall: 1.5vw;
+    --fontSizeBig: 3vw;
+    --fontSizeH1: 8vw;
+    --fontSizeH2: 5vw;
+    --fontSizeBookingButton: var(--fontSizeSmall);
+    --bookingButtonWidth: 10vw;
+    --bookingButtonHeight: 6vw;
 }
 
 * {
@@ -12,24 +29,29 @@
     outline: 1px red solid;
 }
 
-main {
-    height: 3000px;
-}
-
 body {
     background-color: var(--backgroundColour);
-    color: #fff;
+    color: var(--fontColour);
     display: flex;
     flex-direction: column;
     margin-top: var(--navbarHeight);
+    font-size: var(--fontSize);
+}
+
+h1 {
+    font-size: var(--fontSizeH1);
+}
+
+h2 {
+    font-size: var(--fontSizeH2);
 }
 
 header {
     /* make sure header is at the top */
     order: -999;
     position: fixed;
-    top: 0px;
-    left: 0px;
+    top: 0;
+    left: 0;
     height: var(--navbarHeight);
     width: 100%;
 }
@@ -39,6 +61,8 @@ nav {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+    align-items: center;
+    height: 100%;
 }
 
 footer {
@@ -48,14 +72,16 @@ footer {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    height: var(--footerHeight);
+    margin-top: var(--footerTopMargin);
 }
-
 
 footer .socialMedia,
 footer .contactInformationContainer {
     display: flex;
     flex-direction: column;
-    margin: 0px 32px;
+    margin: 0 5vw;
+    justify-content: center;
 }
 
 footer .socialMedia a {
@@ -64,13 +90,8 @@ footer .socialMedia a {
 }
 
 footer .socialMedia a img {
-    height: 16px;
-    width: 16px;
-    align-self: center;
-}
-
-footer .socialMedia a p {
-    align-self: center;
+    height: 1.5vw;
+    width: 1.5vw;
 }
 
 header nav a,
@@ -83,3 +104,55 @@ header nav a:hover,
 footer a:hover {
     color: var(--navbarHoverFontColour);
 }
+
+/* HEIM (index) */
+
+/* BOOKING */
+
+.bookingItemContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5vw;
+}
+
+.bookingItemContainer .bookingItem {
+    display: flex;
+    flex-direction: row;
+}
+
+.bookingItemContainer .bookingItem img {
+    width: 33vw;
+    height: 33vw;
+    border-radius: 50%;
+    margin-right: 5vw;
+}
+
+.bookingItemContainer .bookingItem .bookingItemTextContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 40vw;
+}
+
+.bookingItemContainer .bookingItem .bookingItemTextContainer button {
+    border-radius: 64px;
+    font-size: var(--fontSizeBookingButton);
+    width: var(--bookingButtonWidth);
+    height: var(--bookingButtonHeight);
+    align-self: center;
+    margin: 3vw;
+}
+
+/* Activity description */
+.bookingItemContainer .bookingItem .bookingItemTextContainer>:nth-child(2) {
+    font-size: var(--fontSize);
+}
+
+/* Activity sub-text */
+.bookingItemContainer .bookingItem .bookingItemTextContainer>:nth-child(3) {
+    font-size: var(--fontSizeSmall);
+}
+
+/* TILBAKEMELDING */
+/* GALLERI */
