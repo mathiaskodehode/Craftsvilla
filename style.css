@@ -1,0 +1,85 @@
+:root {
+    --backgroundColour: rgb(60, 60, 84);
+    --fontColour: rgb(255, 255, 255);
+    --navbarHoverFontColour: rgb(100, 100, 255);
+    --navbarBackgroundColour: rgba(54, 75, 75, .75);
+    --navbarHeight: 20px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    outline: 1px red solid;
+}
+
+main {
+    height: 3000px;
+}
+
+body {
+    background-color: var(--backgroundColour);
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    margin-top: var(--navbarHeight);
+}
+
+header {
+    /* make sure header is at the top */
+    order: -999;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    height: var(--navbarHeight);
+    width: 100%;
+}
+
+nav {
+    background-color: var(--navbarBackgroundColour);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+footer {
+    /* make sure footer is at the bottom */
+    order: 999;
+    background-color: var(--navbarBackgroundColour);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+
+footer .socialMedia,
+footer .contactInformationContainer {
+    display: flex;
+    flex-direction: column;
+    margin: 0px 32px;
+}
+
+footer .socialMedia a {
+    display: flex;
+    flex-direction: row;
+}
+
+footer .socialMedia a img {
+    height: 16px;
+    width: 16px;
+    align-self: center;
+}
+
+footer .socialMedia a p {
+    align-self: center;
+}
+
+header nav a,
+footer a {
+    text-decoration: none;
+    color: var(--fontColour);
+}
+
+header nav a:hover,
+footer a:hover {
+    color: var(--navbarHoverFontColour);
+}
