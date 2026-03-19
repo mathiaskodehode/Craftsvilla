@@ -8,10 +8,11 @@ class navbarItem {
 }
 
 class socialMediaItem {
-    constructor(name, src, alt) {
+    constructor(name, src, alt, href) {
         this.name = name;
         this.src = src;
         this.alt = alt;
+        this.href = href;
     }
 }
 
@@ -23,9 +24,9 @@ const navbarItems = [
 ];
 
 const socialMediaItems = [
-    new socialMediaItem("Twitter", "./images/iconTemp.png", "twitter logo"),
-    new socialMediaItem("Facebook", "./images/iconTemp.png", "facebook logo"),
-    new socialMediaItem("linkedin", "./images/iconTemp.png", "linkedin logo"),
+    new socialMediaItem("Twitter", "./images/iconTemp.png", "twitter logo", ""),
+    new socialMediaItem("Facebook", "./images/iconTemp.png", "facebook logo", ""),
+    new socialMediaItem("linkedin", "./images/iconTemp.png", "linkedin logo", ""),
 ];
 
 // MAIN
@@ -76,7 +77,7 @@ function buildFooter() {
 
 function createSocialMediaItem(socialMediaItem) {
     const item = document.createElement("a");
-    item.href = navbarItem.href;
+    item.href = socialMediaItem.href;
 
     const image = document.createElement("img");
     image.src = socialMediaItem.src;
