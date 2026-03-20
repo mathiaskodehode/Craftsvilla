@@ -25,13 +25,23 @@ const navbarItems = [
 
 const socialMediaItems = [
     new socialMediaItem("Twitter", "./images/iconTemp.png", "twitter logo", ""),
-    new socialMediaItem("Facebook", "./images/iconTemp.png", "facebook logo", ""),
-    new socialMediaItem("linkedin", "./images/iconTemp.png", "linkedin logo", ""),
+    new socialMediaItem(
+        "Facebook",
+        "./images/iconTemp.png",
+        "facebook logo",
+        "",
+    ),
+    new socialMediaItem(
+        "linkedin",
+        "./images/iconTemp.png",
+        "linkedin logo",
+        "",
+    ),
 ];
 
 // MAIN
 
-console.debug("HELLO WORLD!");
+console.debug("HELLO WORLD! - main.js");
 
 buildNavbar();
 buildFooter();

@@ -40,6 +40,7 @@ body {
 
 h1 {
     font-size: var(--fontSizeH1);
+    text-align: center;
 }
 
 h2 {
@@ -114,6 +115,7 @@ footer a:hover {
     flex-direction: column;
     align-items: center;
     gap: 5vw;
+    margin-top: 6vw;
 }
 
 .bookingItemContainer .bookingItem {
