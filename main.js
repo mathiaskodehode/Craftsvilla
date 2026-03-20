@@ -24,7 +24,12 @@ const navbarItems = [
 ];
 
 const socialMediaItems = [
-    new socialMediaItem("Twitter", "./images/iconTemp.png", "twitter logo", ""),
+    new socialMediaItem(
+        "Twitter", 
+        "./images/iconTemp.png", 
+        "twitter logo", 
+        ""
+    ),
     new socialMediaItem(
         "Facebook",
         "./images/iconTemp.png",
