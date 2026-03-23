@@ -12,14 +12,14 @@
         wrapping or overflowing text and images will appear in the same relative size
         update: only using vw completly disables zoom.
     */
-    --navbarHeight: 5vw;
-    --footerHeight: 10vw;
+    --navbarHeight: 2vw;
+    --footerHeight: 6.5vw;
     --footerTopMargin: 2vw;
-    --fontSize: 2vw;
-    --fontSizeSmall: 1.5vw;
-    --fontSizeBig: 3vw;
+    --fontSize: 1.5vw;
+    --fontSizeSmall: 1vw;
+    --fontSizeBig: 2.5vw;
     --fontSizeH1: 8vw;
-    --fontSizeH2: 5vw;
+    --fontSizeH2: 3.5vw;
     --fontSizeBookingButton: var(--fontSizeSmall);
     --bookingButtonWidth: 10vw;
     --bookingButtonHeight: 6vw;
