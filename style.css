@@ -4,11 +4,12 @@
     --fontColour: rgb(255, 255, 255);
     --navbarHoverFontColour: rgb(100, 100, 255);
     --navbarBackgroundColour: rgba(55, 55, 77, 0.75);
+    --heroLogoBackgroundColour: #3C3C5488;
     /* 
-    height/width/fontsize/margin/padding/etc based on screen width (maybe a bit 
-    unintuitive, but it works). from my testing this makes sure devices of all 
-    screen widths will be able to contain the contents of the page without any weird 
-    wrapping or overflowing text and images will appear in the same relative size
+        height/width/fontsize/margin/padding/etc based on screen width (maybe a bit 
+        unintuitive, but it works). from my testing this makes sure devices of all 
+        screen widths will be able to contain the contents of the page without any weird 
+        wrapping or overflowing text and images will appear in the same relative size
     */
     --navbarHeight: 5vw;
     --footerHeight: 10vw;
@@ -106,7 +107,39 @@ footer a:hover {
     color: var(--navbarHoverFontColour);
 }
 
+
 /* HEIM (index) */
+
+.heroTextContainer {
+    position: absolute;
+    top: 50%;
+    /* this assumes h1.innerHTML === "CRAFTSVILLA" */
+    left: 22.3%;
+    background-color: var(--heroLogoBackgroundColour);
+}
+
+.heroImageContainer {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    /* accounting for the navbar to make sure the entire hero is in view; */
+    height: calc(100vh - var(--navbarHeight));
+}
+
+.heroImageContainer img {
+    width: 50%;
+    object-fit: cover;
+}
+
+.heroImageContainer :nth-child(1) {
+    height: 100%;
+}
+
+.heroImageContainer :nth-child(2),
+.heroImageContainer :nth-child(3) {
+    height: 50%;
+}
+
 
 /* BOOKING */
 
