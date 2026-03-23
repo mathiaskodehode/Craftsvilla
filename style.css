@@ -10,6 +10,7 @@
         unintuitive, but it works). from my testing this makes sure devices of all 
         screen widths will be able to contain the contents of the page without any weird 
         wrapping or overflowing text and images will appear in the same relative size
+        update: only using vw completly disables zoom.
     */
     --navbarHeight: 5vw;
     --footerHeight: 10vw;
