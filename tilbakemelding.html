@@ -13,6 +13,109 @@
 <body>
     <main>
         <h1>TILBAKEMELDING</h1>
+        <section class="tilbakemeldingContainer">
+            <form>
+                <fieldset>
+                    <legend>
+                        <h2>Vi vil gjerne høre fra deg!</h2>
+                    </legend>
+                    <label for="fname">
+                        <h3>
+                            Navn:
+                        </h3>
+                        <input type="text" id="fname" name="fname">
+                    </label>
+
+                    <label for="email">
+                        <h3>
+                            E-post:
+                        </h3>
+                        <input type="text" id="email" name="lname">
+                    </label>
+
+                    <label for="deltatt">
+                        <h3>
+                            Workshop deltatt på
+                        </h3>
+                        <select name="deltatt" id="deltatt">
+                            <option value="Lerretsmaling">Lerretsmaling</option>
+                            <option value="Akvarellmaling">Akvarellmaling</option>
+                            <option value="Mosaikkkunst">Mosaikkkunst</option>
+                            <option value="Annet">Annet</option>
+                            <option value="Flere">Flere</option>
+                        </select>
+                    </label>
+
+                    <label for="likteBest">
+                        <h3>
+                            Hva likte du best?
+                        </h3>
+                        <select id="likteBest">
+                            <option value="Lerretsmaling">Lerretsmaling</option>
+                            <option value="Akvarellmaling">Akvarellmaling</option>
+                            <option value="Mosaikkkunst">Mosaikkkunst</option>
+                        </select>
+                        <textarea name="likteBestMer" id="likteBestMer" placeholder="Skriv gjerne mer detaljer..."></textarea>
+                    </label>
+
+                     <label for="forbedring">
+                        <h3>
+                            Hvordan kan vi forbedre opplevelsen din?
+                        </h3>
+                        <textarea name="forbedring" id="forbedring" placeholder="..."></textarea>
+                     </label>
+
+                    <label for="anbefaleTilAndre">
+                        <h3>
+                            Vil du anbefale CRAFTSVILLA til andre?
+                        </h3>
+                        <div class="radioButtonContainer">
+                            <label><input type="radio" name="anbefale"> Ja</label>
+                            <label><input type="radio" name="anbefale"> Nei</label>
+                            <label><input type="radio" name="anbefale"> Kanskje</label>
+                        </div>
+                    </label>
+
+                    <label for="consent" class="consent">
+                        <div>
+                            <input type="checkbox" id="consent">
+                        </div>
+                        Jeg gir CRAFTSVILLA tillatelse til å dele tilbakemeldingene min her eller på andre sosiale
+                        medier
+                    </label>
+
+                    <label for="imageUpload">
+                        <h3>
+                            Last opp bilde
+                        </h3>
+                        <input type="file" id="imageUpload">
+                    </label>
+
+                    <button>Send tilbakemelding</button>
+                </fieldset>
+            </form>
+        </section>
+
+        <section>
+            <h2>Hør fra andre deltakere</h2>
+            <div class="definitelyRealReviews preview">
+                <div class="reviewContainer workshopPreviewBox">
+                    <h3 class="reviewTitle">wow veldi bra</h3>
+                    <p class="reviewContent">wow veldi veldi bra kadsfjla;sdjf;l askd fj;a lsk dfja;lskdfj;alskdjf</p>
+                    <p class="reviewerName">- realPerson69</p>
+                </div>
+                <div class="reviewContainer workshopPreviewBox">
+                    <h3 class="reviewTitle">wow veldi bra</h3>
+                    <p class="reviewContent">wow veldi veldi bra kadsfjla;sdjf;l askd fj;a lsk dfja;lskdfj;alskdjf</p>
+                    <p class="reviewerName">- realPerson69</p>
+                </div>
+                <div class="reviewContainer workshopPreviewBox">
+                    <h3 class="reviewTitle">wow veldi bra</h3>
+                    <p class="reviewContent">wow veldi veldi bra kadsfjla;sdjf;l askd fj;a lsk dfja;lskdfj;alskdjf</p>
+                    <p class="reviewerName">- realPerson69</p>
+                </div>
+            </div>
+        </section>
     </main>
 </body>
 
