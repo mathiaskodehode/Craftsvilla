@@ -60,6 +60,7 @@ const galleryItems = [
     ),
 ];
 
+const container = document.getElementById("galleryItemContainer");
 const imageShowcase = document.getElementById("galleryImageShowcase");
 const imageShowcaseImage = document.getElementById("galleryImageShowcaseImage");
 const imageShowcaseText = document.getElementById("galleryImageShowcaseText");
@@ -78,7 +79,6 @@ toggleShowcase();
 // FUNCTIONS
 
 function addGalleryItems() {
-    const container = document.getElementById("galleryItemContainer");
     galleryItems.forEach((item) =>
         container.appendChild(createGalleryItem(item)),
     );
