@@ -8,9 +8,75 @@
     <link rel="stylesheet" href="style.css">
     <link rel="shortcut icon" href="./images/iconTemp.png" type="image/png">
     <script src="./main.js" defer></script>
+    <script src="./booking.js" defer></script>
 </head>
 
 <body>
+
+    <div id="bookingOverlay">
+        <div class="bookingOverlay">
+            <button id="bookingOverlayCloseButton">X</button>
+            <h2>BOOKING SKJEMA</h2>
+            <div class="bookingOverlayContent">
+                <p>Fyll ut skjemaet:</p>
+                <label for="name">
+                    <h4>
+                        Navn
+                    </h4>
+                    <input type="text" name="name" id="name" placeholder="Navn">
+                </label>
+
+                <label for="email">
+                    <h4>
+                        E-post
+                    </h4>
+                    <input type="email" name="email" id="email" placeholder="E-post">
+                </label>
+
+                <label for="phoneNumber">
+                    <h4>
+                        Telefonnummer
+                    </h4>
+                    <input type="tel" name="phoneNumber" id="phoneNumber" placeholder="Telefonnummer">
+                </label>
+
+                <label for="workshop">
+                    <h4>
+                        Hvilken workshop vil du delta på?
+                    </h4>
+                    <select id="workshop">
+                        <option value="Lerretsmaling">Lerretsmaling</option>
+                        <option value="Akvarellmaling">Akvarellmaling</option>
+                        <option value="Mosaikkkunst">Mosaikkkunst</option>
+                    </select>
+                </label>
+
+                <label for="startDate">
+                    <h4>
+                        Velg en når det passer deg best
+                    </h4>
+                    <input type="date" id="startDate" name="startDate" />
+                </label>
+
+                <label for="participants">
+                    <h4>
+                        Antall deltakere
+                    </h4>
+                    <input type="number" id="participants">
+                </label>
+
+                <label for="specialRequests">
+                    <h4>
+                        Spesielle ønsker
+                    </h4>
+                    <textarea id="specialRequests"></textarea>
+                </label>
+
+                <button id="bookingOverlayOrderButton">Bestill</button>
+            </div>
+        </div>
+    </div>
+
     <main>
         <h1>BOOKING</h1>
         <div class="bookingItemContainer">
@@ -27,7 +93,7 @@
                         Sett inkluderer:
                         Ramme, akrylpapir med designmal, akrylfarger, pensler.
                     </p>
-                    <button>
+                    <button id="lerretsmalingButton">
                         Bestill Nå
                     </button>
                 </div>
@@ -45,7 +111,7 @@
                         Sett inkluderer:
                         Ramme, akvarellpapir med designmal, akvarellfarger, pensler.
                     </p>
-                    <button>
+                    <button id="akvarellmalingButton">
                         Bestill Nå
                     </button>
                 </div>
@@ -63,7 +129,7 @@
                         Sett inkluderer:
                         Ramme, A4 størrelse treplate, små fargede steiner, gummi.
                     </p>
-                    <button>
+                    <button id="mosaikkkunstButton">
                         Bestill Nå
                     </button>
                 </div>

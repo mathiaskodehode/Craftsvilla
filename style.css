@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono&family=Xanh+Mono&display=swap');
+
 :root {
     /* colours */
     --backgroundColour: #0B1220;
@@ -27,12 +29,19 @@
     --fontSizeBookingButton: var(--fontSizeSmall);
     --bookingButtonWidth: 10vw;
     --bookingButtonHeight: 6vw;
+    --bookingOverlayWidth: 60vw;
+    --bookingOverlayHeight: 80vw;
 }
 
 * {
+    font-family: "Jetbrains Mono";
     margin: 0;
     padding: 0;
     /* outline: 1px red solid; */
+}
+
+.scrollingDisabled {
+    overflow: hidden;
 }
 
 body {
@@ -79,6 +88,7 @@ header {
     left: 0;
     height: var(--navbarHeight);
     width: 100%;
+    backdrop-filter: blur(5px);
 }
 
 nav {
@@ -172,6 +182,7 @@ footer a:hover {
     /* this assumes h1.innerHTML == "CRAFTSVILLA" && var(--fontSizeH1) == 8vw */
     left: 22.3%;
     background-color: var(--heroLogoBackgroundColour);
+    backdrop-filter: blur(10px);
 }
 
 .heroImageContainer {
@@ -268,10 +279,17 @@ footer a:hover {
 .bookingItemContainer .bookingItem .bookingItemTextContainer button {
     border-radius: 64px;
     font-size: var(--fontSizeBookingButton);
-    width: var(--bookingButtonWidth);
-    height: var(--bookingButtonHeight);
     align-self: center;
-    margin: 3vw;
+    margin-top: 2vw;
+    padding: 1vw;
+    width: 65%;
+    border: none;
+    background-color: var(--buttonColour);
+    color: var(--fontColour);
+}
+
+.bookingItemContainer .bookingItem .bookingItemTextContainer button:hover {
+    background-color: var(--buttonHoverColour);
 }
 
 /* Activity description */
@@ -283,6 +301,79 @@ footer a:hover {
 .bookingItemContainer .bookingItem .bookingItemTextContainer>:nth-child(3) {
     font-size: var(--fontSizeSmall);
 }
+
+/* BOOKING OVERLAY */
+
+#bookingOverlay {
+    position: fixed;
+    top: 0;
+    background-color: #0009;
+    backdrop-filter: blur(2px);
+    width: 100%;
+    height: 100%;
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.bookingOverlay {
+    background-color: var(--backgroundColour);
+    border-radius: 16px;
+    padding: 2vw;
+    box-shadow: 0 2vw 5vw #0007;
+    width: 35vw;
+}
+
+.bookingOverlayContent {
+    display: flex;
+    flex-direction: column;
+    gap: 1vw;
+    height: 65vh;
+    overflow-y: auto;
+}
+
+.bookingOverlay input,
+.bookingOverlay textarea,
+.bookingOverlay select {
+    width: 90%;
+    padding: 1vw;
+    border-radius: 8px;
+    background-color: var(--cardColour);
+    color: var(--fontColour);
+}
+
+.bookingOverlay select {
+    width: 95%;
+}
+
+#bookingOverlayCloseButton {
+    float: right;
+    cursor: pointer;
+    background-color: #0000;
+    border: none;
+    color: var(--fontColour);
+    padding: 0 .5vw;
+}
+
+#bookingOverlayOrderButton {
+    margin-top: 2vw;
+    width: 95%;
+    padding: 1vw;
+    border: none;
+    border-radius: 64px;
+    background-color: var(--buttonColour);
+    color: var(--fontColour);
+    cursor: pointer;
+}
+
+#bookingOverlayOrderButton:hover {
+    background-color: var(--buttonHoverColour);
+}
+
+#workshopStart {
+    
+}
+
 
 /* TILBAKEMELDING */
 
@@ -352,7 +443,7 @@ footer a:hover {
 .tilbakemeldingContainer button {
     background-color: var(--buttonColour);
     color: var(--fontColour);
-    width: 100%;
+    width: 95%;
     margin-top: 2vw;
     padding: 1vw;
     border: none;

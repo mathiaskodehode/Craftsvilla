@@ -1,5 +1,4 @@
 // CLASSES & VARIABLES
-
 class navbarItem {
     constructor(name, href) {
         this.name = name;
@@ -45,14 +44,12 @@ const socialMediaItems = [
 ];
 
 // MAIN
-
 console.debug("HELLO WORLD! - main.js");
 
 buildNavbar();
 buildFooter();
 
 // FUNCTIONS
-
 function buildNavbar() {
     const header = document.createElement("header");
     document.body.appendChild(header);
