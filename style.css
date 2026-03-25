@@ -25,7 +25,7 @@
     --fontSizeBig: 2.5vw;
     --fontSizeH1: 8vw;
     --fontSizeH2: 3.5vw;
-    --fontsizeH3: 3vw;
+    --fontsizeH3: 2vw;
     --fontSizeBookingButton: var(--fontSizeSmall);
     --bookingButtonWidth: 10vw;
     --bookingButtonHeight: 6vw;
@@ -51,6 +51,10 @@ body {
     flex-direction: column;
     margin-top: var(--navbarHeight);
     font-size: var(--fontSize);
+}
+
+main {
+    min-height: calc(100vh - var(--navbarHeight) - var(--footerHeight) - var(--footerTopMargin));
 }
 
 section {
@@ -218,10 +222,11 @@ footer a:hover {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: space-between;
     background-color: var(--cardColour);
     width: 20vw;
     border-radius: 16px;
-    padding: 2vw;
+    padding: 3vw;
     box-shadow: #0008 0 .4vw .7vw .6vw;
     transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
@@ -295,6 +300,7 @@ footer a:hover {
 /* Activity description */
 .bookingItemContainer .bookingItem .bookingItemTextContainer>:nth-child(2) {
     font-size: var(--fontSize);
+    margin-bottom: 1.5vw;
 }
 
 /* Activity sub-text */
@@ -304,7 +310,8 @@ footer a:hover {
 
 /* BOOKING OVERLAY */
 
-#bookingOverlay {
+#bookingOverlay,
+#galleryImageShowcase {
     position: fixed;
     top: 0;
     background-color: #0009;
@@ -324,7 +331,8 @@ footer a:hover {
     width: 35vw;
 }
 
-.bookingOverlayContent {
+.bookingOverlayContent,
+.galleryImageShowcase {
     display: flex;
     flex-direction: column;
     gap: 1vw;
@@ -346,13 +354,18 @@ footer a:hover {
     width: 95%;
 }
 
-#bookingOverlayCloseButton {
+#bookingOverlayCloseButton,
+#galleryImageShowcaseCloseButton {
     float: right;
     cursor: pointer;
     background-color: #0000;
     border: none;
     color: var(--fontColour);
     padding: 0 .5vw;
+}
+
+#galleryImageShowcaseCloseButton {
+    border: .1vw solid var(--fontColour);
 }
 
 #bookingOverlayOrderButton {
@@ -369,11 +382,6 @@ footer a:hover {
 #bookingOverlayOrderButton:hover {
     background-color: var(--buttonHoverColour);
 }
-
-#workshopStart {
-    
-}
-
 
 /* TILBAKEMELDING */
 
@@ -392,6 +400,7 @@ footer a:hover {
 
 .tilbakemeldingContainer form fieldset {
     padding: 3vw;
+    width: 100%;
     background-color: var(--cardColour);
     border-radius: 16px;
 }
@@ -459,7 +468,7 @@ footer a:hover {
 .definitelyRealReviews {
     display: flex;
     flex-direction: row;
-    gap: 2vw;
+    gap: 1vw;
     flex-wrap: wrap;
 }
 
@@ -471,3 +480,48 @@ footer a:hover {
 }
 
 /* GALLERI */
+
+.galleryItemContainer {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin: 2vw;
+    gap: 2vw;
+}
+
+.galleryItem {
+    background-color: var(--cardColour);
+    width: 10vw;
+    border-radius: 12px;
+    cursor: pointer;
+}
+
+.galleryItem img {
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.galleryImageShowcase {
+    background-color: var(--backgroundColour);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 12px;
+    max-height: 90vw;
+    width: 30vw;
+    padding: 2vw;
+}
+
+.galleryImageShowcase img {
+    border-radius: 12px;
+    height: 20vw;
+}
+
+.galleryImageShowcase p {
+    font-size: var(--fontSizeSmall);
+}

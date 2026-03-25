@@ -24,20 +24,20 @@ const navbarItems = [
 
 const socialMediaItems = [
     new socialMediaItem(
-        "Twitter", 
-        "./images/iconTemp.png", 
-        "twitter logo", 
-        ""
+        "Twitter",
+        "./images/twitterIcon.png",
+        "twitter logo",
+        "",
     ),
     new socialMediaItem(
         "Facebook",
-        "./images/iconTemp.png",
+        "./images/facebookIcon.png",
         "facebook logo",
         "",
     ),
     new socialMediaItem(
         "linkedin",
-        "./images/iconTemp.png",
+        "./images/linkedinIcon.png",
         "linkedin logo",
         "",
     ),
@@ -75,9 +75,9 @@ function buildFooter() {
     contactInfoContainer.classList.add("contactInformationContainer");
     footer.appendChild(contactInfoContainer);
 
-    const temp = document.createElement("p");
-    temp.innerHTML = "PLACEHOLDER TEXT!!!!!!";
-    contactInfoContainer.appendChild(temp);
+    const contactUs = document.createElement("p");
+    contactUs.innerHTML = "Send oss gjerne en e-post: hallo@craftsvilla.no";
+    contactInfoContainer.appendChild(contactUs);
 
     const socialMedia = document.createElement("div");
     socialMedia.classList.add("socialMedia");

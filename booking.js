@@ -8,17 +8,17 @@ const buttons = [
 ];
 
 // MAIN
-console.debug("HELLO WORLD! - main.js");
+console.debug("HELLO WORLD! - booking.js");
 
-toggleBookingOverlay();
+toggleShowcase();
 
 buttons.forEach((b) => {
     // todo: auto fill in some content in the overlay based on which button is pressed
-    b.onclick = toggleBookingOverlay;
+    b.onclick = toggleShowcase;
 });
 
 // FUNCTIONS
-function toggleBookingOverlay() {
+function toggleShowcase() {
     if (getOverlayDisplay() === "none") {
         setOverlayDisplay("flex");
         document.body.classList.add("scrollingDisabled");
