@@ -443,10 +443,19 @@ footer a:hover {
     gap: .5vw;
 }
 
-.tilbakemeldingContainer .consent {
+.consent {
     display: flex;
-    align-items: flex-start;
     gap: 1vw;
+    padding: 1.5vw;
+}
+
+.consent p {
+    text-align: start;
+}
+
+.consent label input {
+    margin-bottom: 2vw;
+    margin-right: 2vw;
 }
 
 .tilbakemeldingContainer button {

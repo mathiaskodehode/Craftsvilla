@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="no">
 
 <head>
     <meta charset="UTF-8">
@@ -12,76 +12,11 @@
 </head>
 
 <body>
-
-    <div id="bookingOverlay">
-        <div class="bookingOverlay">
-            <button id="bookingOverlayCloseButton">X</button>
-            <h2>BOOKING SKJEMA</h2>
-            <div class="bookingOverlayContent">
-                <p>Fyll ut skjemaet:</p>
-                <label for="name">
-                    <h4>
-                        Navn
-                    </h4>
-                    <input type="text" name="name" id="name" placeholder="Navn">
-                </label>
-
-                <label for="email">
-                    <h4>
-                        E-post
-                    </h4>
-                    <input type="email" name="email" id="email" placeholder="E-post">
-                </label>
-
-                <label for="phoneNumber">
-                    <h4>
-                        Telefonnummer
-                    </h4>
-                    <input type="tel" name="phoneNumber" id="phoneNumber" placeholder="Telefonnummer">
-                </label>
-
-                <label for="workshop">
-                    <h4>
-                        Hvilken workshop vil du delta på?
-                    </h4>
-                    <select id="workshop">
-                        <option value="Lerretsmaling">Lerretsmaling</option>
-                        <option value="Akvarellmaling">Akvarellmaling</option>
-                        <option value="Mosaikkkunst">Mosaikkkunst</option>
-                    </select>
-                </label>
-
-                <label for="startDate">
-                    <h4>
-                        Velg en når det passer deg best
-                    </h4>
-                    <input type="date" id="startDate" name="startDate" />
-                </label>
-
-                <label for="participants">
-                    <h4>
-                        Antall deltakere
-                    </h4>
-                    <input type="number" id="participants">
-                </label>
-
-                <label for="specialRequests">
-                    <h4>
-                        Spesielle ønsker
-                    </h4>
-                    <textarea id="specialRequests"></textarea>
-                </label>
-
-                <button id="bookingOverlayOrderButton">Bestill</button>
-            </div>
-        </div>
-    </div>
-
     <main>
         <h1>BOOKING</h1>
         <div class="bookingItemContainer">
             <div class="bookingItem">
-                <img src="./images/lerretsmaling.jpg" type="image/jpg" alt="lerretsmaling">
+                <img src="./images/lerretsmaling.jpg" alt="lerretsmaling">
                 <div class="bookingItemTextContainer">
                     <h2>
                         Lerretsmaling
@@ -102,7 +37,7 @@
                 </div>
             </div>
             <div class="bookingItem">
-                <img src="./images/akvarellmaling.jpg" type="image/jpg" alt="akvarellmaling">
+                <img src="./images/akvarellmaling.jpg" alt="akvarellmaling">
                 <div class="bookingItemTextContainer">
                     <h2>
                         Akvarellmaling
@@ -122,7 +57,7 @@
                 </div>
             </div>
             <div class="bookingItem">
-                <img src="./images/mosaikkkunst.jpg" type="image/jpg" alt="mosaikkkunst">
+                <img src="./images/mosaikkkunst.jpg" alt="mosaikkkunst">
                 <div class="bookingItemTextContainer">
                     <h2>
                         Mosaikkkunst
@@ -143,6 +78,71 @@
             </div>
         </div>
     </main>
+
+    <div id="bookingOverlay">
+        <div class="bookingOverlay">
+            <button id="bookingOverlayCloseButton">X</button>
+            <h2>BOOKING SKJEMA</h2>
+            <div class="bookingOverlayContent">
+                <p>Fyll ut skjemaet:</p>
+                <h3>
+                    Navn
+                </h3>
+                <label for="name">
+                    <input type="text" name="name" id="name" placeholder="Navn">
+                </label>
+
+                <h3>
+                    E-post
+                </h3>
+                <label for="email">
+                    <input type="email" name="email" id="email" placeholder="E-post">
+                </label>
+
+                <h3>
+                    Telefonnummer
+                </h3>
+                <label for="phoneNumber">
+                    <input type="tel" name="phoneNumber" id="phoneNumber" placeholder="Telefonnummer">
+                </label>
+
+                <h3>
+                    Hvilken workshop vil du delta på?
+                </h3>
+                <label for="workshop">
+                    <select id="workshop">
+                        <option value="Lerretsmaling">Lerretsmaling</option>
+                        <option value="Akvarellmaling">Akvarellmaling</option>
+                        <option value="Mosaikkkunst">Mosaikkkunst</option>
+                    </select>
+                </label>
+
+                <h3>
+                    Velg en når det passer deg best
+                </h3>
+                <label for="startDate">
+                    <input type="date" id="startDate" name="startDate" />
+                </label>
+
+                <h3>
+                    Antall deltakere
+                </h3>
+                <label for="participants">
+                    <input type="number" id="participants">
+                </label>
+
+                <h3>
+                    Spesielle ønsker
+                </h3>
+                <label for="specialRequests">
+                    <textarea id="specialRequests"></textarea>
+                </label>
+
+                <button id="bookingOverlayOrderButton">Bestill</button>
+            </div>
+        </div>
+    </div>
+
 </body>
 
 </html>

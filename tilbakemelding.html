@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="no">
 
 <head>
     <meta charset="UTF-8">
@@ -64,24 +64,24 @@
                     <legend>
                         <h2>Vi vil gjerne høre fra deg!</h2>
                     </legend>
+                    <h3>
+                        Navn:
+                    </h3>
                     <label for="fname">
-                        <h3>
-                            Navn:
-                        </h3>
                         <input type="text" id="fname" name="fname">
                     </label>
 
+                    <h3>
+                        E-post:
+                    </h3>
                     <label for="email">
-                        <h3>
-                            E-post:
-                        </h3>
                         <input type="text" id="email" name="lname">
                     </label>
 
+                    <h3>
+                        Workshop deltatt på
+                    </h3>
                     <label for="deltatt">
-                        <h3>
-                            Workshop deltatt på
-                        </h3>
                         <select name="deltatt" id="deltatt">
                             <option value="Lerretsmaling">Lerretsmaling</option>
                             <option value="Akvarellmaling">Akvarellmaling</option>
@@ -91,49 +91,58 @@
                         </select>
                     </label>
 
+                    <h3>
+                        Hva likte du best?
+                    </h3>
                     <label for="likteBest">
-                        <h3>
-                            Hva likte du best?
-                        </h3>
                         <select id="likteBest">
                             <option value="Lerretsmaling">Lerretsmaling</option>
                             <option value="Akvarellmaling">Akvarellmaling</option>
                             <option value="Mosaikkkunst">Mosaikkkunst</option>
                         </select>
+                    </label>
+                    <label for="likteBestMer">
                         <textarea name="likteBestMer" id="likteBestMer"
                             placeholder="Skriv gjerne mer detaljer..."></textarea>
                     </label>
 
+                    <h3>
+                        Hvordan kan vi forbedre opplevelsen din?
+                    </h3>
                     <label for="forbedring">
-                        <h3>
-                            Hvordan kan vi forbedre opplevelsen din?
-                        </h3>
                         <textarea name="forbedring" id="forbedring" placeholder="..."></textarea>
                     </label>
 
-                    <label for="anbefaleTilAndre">
-                        <h3>
-                            Vil du anbefale CRAFTSVILLA til andre?
-                        </h3>
-                        <div class="radioButtonContainer">
-                            <label><input type="radio" name="anbefale"> Ja</label>
-                            <label><input type="radio" name="anbefale"> Nei</label>
-                            <label><input type="radio" name="anbefale"> Kanskje</label>
-                        </div>
-                    </label>
+                    <h3>Vil du anbefale CRAFTSVILLA til andre?</h3>
+                    <div class="radioButtonContainer">
+                        <label>
+                            <input type="radio" name="anbefale" id="ja" value="ja">
+                            Ja
+                        </label><br>
+                        <label>
+                            <input type="radio" name="anbefale" id="nei" value="nei">
+                            Nei
+                        </label><br>
+                        <label>
+                            <input type="radio" name="anbefale" id="kanskje" value="kanskje">
+                            Kanskje
+                        </label>
+                    </div>
 
-                    <label for="consent" class="consent">
-                        <div>
+                    <div class="consent">
+                        <label for="consent">
                             <input type="checkbox" id="consent">
-                        </div>
-                        Jeg gir CRAFTSVILLA tillatelse til å dele tilbakemeldingene min her eller på andre sosiale
-                        medier
-                    </label>
+                        </label>
+                        <p>
+                            Jeg gir CRAFTSVILLA tillatelse til å dele tilbakemeldingene min her eller på andre sosiale
+                            medier
+                        </p>
+                    </div>
 
+                    <h3>
+                        Last opp bilde
+                    </h3>
                     <label for="imageUpload">
-                        <h3>
-                            Last opp bilde
-                        </h3>
                         <input type="file" id="imageUpload">
                     </label>
 
